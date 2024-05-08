@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    setInterval(() => {
+      new Notification([
+        '该接水喝了',
+        '该去尿尿了',
+        '该吃点零食了',
+        '该拉屎了',
+      ][Math.floor(Math.random() * 4)])
+    }, 45 * 60 * 1000);
+    
+    Notification.requestPermission().then(() => {
+      new Notification('番茄钟，启动！');
+    });
+  </script>
+</body>
+</html>
